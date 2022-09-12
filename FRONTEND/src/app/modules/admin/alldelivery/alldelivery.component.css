@@ -170,3 +170,18 @@
     font-size: small;
     padding-top: 15px;
   }
+
+ button{
+    background-color: rgb(63, 196, 63);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+    color: #f2f2f2;
+    margin-left: 20px;
+  }
+  a{
+    text-decoration: none;
+    color: #fffdfd;
+
+  }

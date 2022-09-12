@@ -9,6 +9,11 @@ import { AdminService, parcelInterface } from '../adminservices/admin.service';
 export class AlldeliveryComponent implements OnInit {
   allparcels: parcelInterface[] = [];
 
+  todayNumber: number = Date.now();
+  todayDate : Date = new Date();
+  todayString : string = new Date().toDateString();
+  todayISOString : string = new Date().toISOString();
+
 
   constructor( private parcel: AdminService) {}
 
