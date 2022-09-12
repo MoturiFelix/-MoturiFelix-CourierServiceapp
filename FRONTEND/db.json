@@ -85,8 +85,18 @@
       "departure": "22:09",
       "arrival": "12:09",
       "id": 4
+    },
+    {
+      "username": "Queen Victoria",
+      "desc": "Crown",
+      "from": "Mtito",
+      "dst": "Ndei",
+      "weight": "45",
+      "status": "Dispatched",
+      "departure": "00:55",
+      "arrival": "01:55",
+      "id": 5
     }
-   
   ],
   "comments": [
     {

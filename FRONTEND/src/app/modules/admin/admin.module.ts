@@ -9,6 +9,7 @@ import { AdmindashComponent } from './admindash/admindash.component';
 import { AlldeliveryComponent } from './alldelivery/alldelivery.component';
 import { AllusersComponent } from './allusers/allusers.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { OnedeliveryComponent } from './onedelivery/onedelivery.component';
 
 
 
@@ -19,6 +20,7 @@ import {  HttpClientModule } from '@angular/common/http';
     AdmindashComponent,
     AlldeliveryComponent,
     AllusersComponent,
+    OnedeliveryComponent,
     // UserdashComponent
     
    

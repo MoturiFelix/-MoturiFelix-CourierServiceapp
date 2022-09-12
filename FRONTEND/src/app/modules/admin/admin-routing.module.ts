@@ -1,3 +1,4 @@
+import { OnedeliveryComponent } from './onedelivery/onedelivery.component';
 import { AllusersComponent } from './allusers/allusers.component';
 import { AlldeliveryComponent } from './alldelivery/alldelivery.component';
 import { AdmindashComponent } from './admindash/admindash.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   children:[
     {path:'',component:AlldeliveryComponent},
    {path:'add-parcel',component:AddparcelsComponent},
-   {path:'all-users',component:AllusersComponent}
+   {path:'all-users',component:AllusersComponent},
+   {path:'delivery',component:OnedeliveryComponent}
 
   ]},
   

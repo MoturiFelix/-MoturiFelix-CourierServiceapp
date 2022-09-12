@@ -41,4 +41,8 @@ export class AdminService {
     return this.http.get<parcelInterface[]>('http://localhost:3000/parcels')
   }
 
+  getParcel(id:number){
+    return this.http.get<parcelInterface[]>(`http://localhost:3000/parcels/${id}`)
+  }
+
 }
