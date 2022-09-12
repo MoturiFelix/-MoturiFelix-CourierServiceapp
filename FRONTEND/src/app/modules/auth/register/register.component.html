@@ -1,0 +1,38 @@
+
+
+<div class="container">
+    <div class="form">
+        <div class="title">
+        <h1 >Create Account</h1>  
+         </div>   
+        <form [formGroup]= "form" (ngSubmit)= "onSubmit()">
+          <!-- <label for="name">Full Names</label><br> -->
+          <input class="put" type="text" id="fname" name="firstname" placeholder="Your Full name.." formControlName='username'  />
+          <p class="error" *ngIf= "!form.get('username')!.valid && form.get('username')!.touched">* Please Enter a username</p>
+          <br>
+      
+          <!-- <label for="email">Email Address</label><br> -->
+          <input class="put" type="email" id="email" name="email" placeholder="Your Email Address." formControlName='email'/>
+            <br>
+          <!-- <label for="pnumber">Phone Number</label><br> -->
+          <input class="put" type="text" id="lname" name="lastname" placeholder="Your Phone Number.." formControlName='number'/>
+            <br>
+          <!-- <label for="Password">Password</label><br> -->
+          <input class="put" type="password" id="pword" name="password" placeholder="Create a Password.." formControlName='password'/>
+      
+          <br>
+          <input class="put" type="text" id="role" hidden name="password" value="user" placeholder="Create a Password.." formControlName='role'/>
+      
+          <br>
+
+        <div class="sbtbtn">
+          <input class="sbt" type="submit" value="Sign In">
+        </div>
+        </form>
+     <div class="link">
+      <a routerLink="/auth/login">I already have an Account</a>
+    </div>
+    </div>
+  </div>
+
+

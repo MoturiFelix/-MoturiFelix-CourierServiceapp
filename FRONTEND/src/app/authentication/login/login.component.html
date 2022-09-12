@@ -1,0 +1,36 @@
+
+
+
+<div class="container">
+    <div class="form">
+          
+        <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+               
+          <!-- <label for="email">Email Address</label><br> -->
+          <input class="put" type="email" id="email" placeholder="Your Email Address." ngModel name="email" required email #email='ngModel'/>
+          <p *ngIf= "!email.valid && email.touched" class="error">*Please Input the email you registered with</p>
+            <br>
+          <!-- <label for="pnumber">Phone Number</label><br> -->
+          
+          <!-- <label for="Password">Password</label><br> -->
+          <input class="put" type="password" id="pword" placeholder="Create a Password.." ngModel name="password" required />
+      
+          <br>
+        <div class="sbtbtn">
+          <input [disabled]= "!form.valid" class="sbt" type="submit" value="Log In"/>
+        </div>
+        </form>
+     <div class="link">
+      <a routerLink="/auth/signup">I don't have an Account</a>
+       
+    </div>
+   
+    </div>
+    <div class="pic">
+        <img src="assets/images/pmap3.png" alt="">
+    </div>
+    
+  </div>
+
+
+ 

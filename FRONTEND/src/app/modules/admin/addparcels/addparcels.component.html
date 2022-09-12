@@ -1,0 +1,66 @@
+
+
+
+<div class="container">
+    <div class="form">
+        <div class="title">
+        <h3>ADD DELIVERY</h3>  
+         </div>   
+        <form  [formGroup]="formValue" (ngSubmit)="addParcel()">
+          <!-- <label for="name">Full Names</label><br> -->
+          <input class="put" type="text" id="fname" name="firstname" placeholder="Your Full name.." formControlName='username'  />
+          <!-- <p class="error" *ngIf= "!form.get('username')!.valid && form.get('username')!.touched">* Please Enter a username</p> -->
+          <br>
+          
+          <input class="put" type="text" id="desc" name="description" placeholder="Parcel Description" formControlName='desc'  />
+         <br>
+
+    
+         <input class="put" type="text" id="from" name="from" placeholder="From" formControlName='from'  />
+         <br>
+            
+         <input class="put" type="text" id="dst" name="dst" placeholder="Destination" formControlName='dst'  />
+         <br>
+
+         <input class="put" type="text" id="weight" name="weight" placeholder="Parcel Weight" formControlName='weight'  />
+
+         <input class="put" type="text" id="status" name="status" placeholder="status" formControlName='status'  />
+         <br>
+        
+          <label for="name">TIME OUT</label><br>
+         <input class="put" type="time" id="timeout" name="timeout" placeholder="Timeout" formControlName='departure'  />
+         <br>
+         <label for="name">ARRIVAL TIME</label><br>
+         <input class="put" type="time" id="arrival" name="arrival" placeholder="arrival" formControlName='arrival'  />
+         <br>
+      
+            
+         <br>
+      
+      
+      
+          <!-- <label for="email">Email Address</label><br> -->
+          <!-- <input class="put" type="email" id="email" name="email" placeholder="Your Email Address." formControlName='email'/>
+            <br> -->
+          <!-- <label for="pnumber">Phone Number</label><br> -->
+          <!-- <input class="put" type="text" id="lname" name="lastname" placeholder="Your Phone Number.." formControlName='number'/>
+            <br> -->
+          <!-- <label for="Password">Password</label><br> -->
+          <!-- <input class="put" type="password" id="pword" name="password" placeholder="Create a Password.." formControlName='password'/>
+      
+          <br>
+          <input class="put" type="text" id="role" hidden name="password" value="user" placeholder="Create a Password.." formControlName='role'/>
+      
+          <br> -->
+
+        <div class="sbtbtn">
+          <input class="sbt" type="submit" value="ADD">
+        </div>
+        </form>
+     <!-- <div class="link">
+      <a routerLink="/auth/login">I already have an Account</a>
+    </div> -->
+    </div>
+  </div>
+
+

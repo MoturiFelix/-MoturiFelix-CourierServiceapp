@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:wght@500&family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Poppins:wght@100;500&family=Rubik:wght@300;400;500&display=swap');
+
+.upcontainer{
+    background-color: #1B1E1D;
+    padding-top: 90px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500%;
+    
+}
+
+.desc{
+    color: #A6A6A6;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+}
+
+.buttons{
+    margin-top: 140px;
+}
+
+.btn{
+    padding: 10px 60px;
+   
+    border-radius: 20px;
+    background-color: #CBFC00;
+    text-decoration: bold;
+    border: 0px;
+    color: #1B1E1D;
+    font-size: medium;
+}
+.btn a{
+    text-decoration: none;
+    color: #1B1E1D;
+    font-size: medium;
+}
+.btn:hover{
+    padding: 10px 60px;
+    border-radius: 20px;
+    background-color: rgb(149, 249, 0);
+    text-decoration: bold;
+    border: 0px;
+}
+
+hr.rounded {
+    border-top: 2px solid rgb(30, 181, 27);
+    border-radius: 5px;
+  }
+
+.join{
+    margin-left: 50px;
+}
+
+.rightimage{
+   height: 500px;
+   margin-bottom: 10px;
+   padding-left: 50px;
+}
+
+.picleft img{
+    height: 90%;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+.containerdown{
+    /* padding-top: 40px; */
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+.titledown h1{
+
+    color: greenyellow;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+}
+/* .inforight{
+    gap: 20px;
+} */
+
+.infodown{
+    color: aliceblue;
+    padding-top: 0px;
+    padding-bottom: 0px;
+   
+   
+}
+
+.btnspace {
+    /* text-align: center; */
+    margin-top: 20px;
+    margin-left: 200px;
+    /* margin-right: auto; */
+}
+
+.btnq {
+    padding: 10px 60px;
+   
+    border-radius: 20px;
+    background-color: #CBFC00;
+    text-decoration: bold;
+    border: 0px;
+
+}
+
+.btnq:hover{
+    padding: 10px 60px;
+    border-radius: 20px;
+    background-color: rgb(149, 249, 0);
+    text-decoration: bold;
+    border: 0px;
+}
+

@@ -1,0 +1,55 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="container">
+  <div class="leftNavigation">
+    <div class="welcome">
+      <img src="assets/images/logoblack.png" alt="" />
+      <h4>
+        Welcome <br />
+        User Name
+      </h4>
+    </div>
+    <hr />
+    <div class="home">
+      <a href="">☰ Dashboard</a>
+    </div>
+    <hr />
+    <div class="orders">
+      <a routerLink="profile">My Profile</a>
+      <a routerLink="/user" >Orders</a>
+      <!-- <a href=""> </a> -->
+    </div>
+    <hr />
+    <div class="orders">
+      <!-- <a href="">Add Distribution</a> -->
+      <a href="">Delivered</a>
+      <a href="">Request a Delivery</a>
+    </div>
+    <hr />
+  </div>
+
+  <div class="rightNavigation">
+    <div class="search">
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search.." name="search" />
+          <button type="submit"><i class="fa fa-search">GO</i></button>
+        </form>
+      </div>
+      <div class="pic">
+        <p>User Name</p>
+      </div>
+    </div>
+    <div class="layer2">
+      <div class="dash">
+        <h2>☰ Dashboard</h2>
+      </div>
+      <div class="addbtn">
+        <button>Download Report</button>
+      </div>
+    </div>
+  
+    <!-- data table -->
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

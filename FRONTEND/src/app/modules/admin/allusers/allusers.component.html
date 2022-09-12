@@ -1,0 +1,30 @@
+<div class="layer2">
+  <div class="dash">
+    <h2>☰ Dashboard</h2>
+  </div>
+  <div class="addbtn">
+    <button>Download Report</button>
+  </div>
+</div>
+
+<div class="users">
+    <div class="topic">
+      <h1>All Users</h1>
+      <!-- <p>Click on a user to view more details about the delivery</p> -->
+    </div>
+
+    <table id="customers">
+      <tr>
+        <th>Full Name</th>  
+        <th>Email</th>
+        <th>Phone number</th>
+        <th>Status</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.username}}</td>
+        <td>{{user.email}} </td>
+        <td>{{user.number}}</td>
+        <td>Active</td>
+      </tr>
+    </table>
+  </div>

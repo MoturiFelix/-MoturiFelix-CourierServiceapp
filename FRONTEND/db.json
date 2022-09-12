@@ -1,0 +1,101 @@
+{
+  "customers": [
+    {
+      "role": "user",
+      "username": "Tom John",
+      "email": "tom@gmail.com",
+      "number": "0798288410",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "role": "user",
+      "username": "ken maina ",
+      "email": "ken@gmail.com",
+      "number": "0798288410",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "role": "admin",
+      "username": "Felix Moturi",
+      "email": "moturifelix@gmail.com",
+      "number": "0713025513",
+      "password": "12345678",
+      "id": 3
+    },
+    {
+      "role": "user",
+      "username": "evans tom",
+      "email": "evans@gmail.com",
+      "number": "0798288410",
+      "password": "12345678",
+      "id": 4
+    },
+    {
+      "role": "user",
+      "username": "James Bond",
+      "email": "jb@gmail.com",
+      "number": "0713025555",
+      "password": "12345678",
+      "id": 5
+    }
+  ],
+  "parcels": [
+    {
+      "username": "Tom John",
+      "desc": "document",
+      "from": "nairobi",
+      "dst": "nyeri",
+      "weight": "45",
+      "status": "dispatched",
+      "departure": "22:09",
+      "arrival": "12:09",
+      "id": 1
+    },
+    {
+      "username": "Felix Moturi",
+      "desc": "TV",
+      "from": "Nairobi",
+      "dst": "Nyeri",
+      "weight": "100",
+      "status": "dispatched",
+      "departure": "22:09",
+      "arrival": "12:09",
+      "id": 2
+    },
+    {
+      "username": "ken maina",
+      "desc": "Dog",
+      "from": "Kirinyaga",
+      "dst": "Nairobi",
+      "weight": "2",
+      "status": "dispatched",
+      "departure": "22:09",
+      "arrival": "12:09",
+      "id": 3
+    },
+    {
+      "username": "James Bond",
+      "desc": "Gun",
+      "from": "Nairobi",
+      "dst": "gangistan",
+      "weight": "40",
+      "status": "dispatched",
+      "departure": "22:09",
+      "arrival": "12:09",
+      "id": 4
+    }
+   
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
