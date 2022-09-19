@@ -109,12 +109,18 @@
 --  END
 
 
+
+
+
 -- CREATE PROCEDURE deleteParcel(@ParcelID int)
 
 --  AS
 --  BEGIN
 --  DELETE FROM Parcels  WHERE  ParcelID =@ParcelID
 --  END
+
+
+
 
 
 -- CREATE PROCEDURE get_single_parcel(@parcelID int)
@@ -126,3 +132,31 @@
 --  select * from Parcels where   ParcelID =@parcelID;
 
 --  END
+
+
+
+
+-- CREATE PROCEDURE softDeleteParcel(@ParcelID VARCHAR(80))
+-- AS
+
+-- BEGIN
+
+--     IF EXISTS(SELECT * FROM Parcels WHERE ParcelID=@ParcelID)
+
+--     BEGIN
+--         UPDATE Parcels SET Is_Deleted =1 WHERE ParcelID =@ParcelID
+--     END
+--     ELSE
+--     BEGIN
+--         RAISERROR ('No parcel with that ID',11,1);
+--         RETURN
+--     END
+
+-- END
+
+
+-- ....................................
+
+
+--   ALTER TABLE Users
+-- ADD Issent varchar(10) DEFAULT 0;

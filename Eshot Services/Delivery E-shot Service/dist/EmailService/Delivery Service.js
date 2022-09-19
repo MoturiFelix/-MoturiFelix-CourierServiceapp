@@ -39,7 +39,7 @@ const SendEmails = () => __awaiter(void 0, void 0, void 0, function* () {
             };
             try {
                 yield (0, Email_1.default)(messageoption);
-                yield pool.request().query(`UPDATE Parcels SET P_Status='Being Delivered' WHERE P_Status = Dispatched`);
+                yield pool.request().query(`UPDATE Parcels SET P_Status= Being Delivered WHERE P_Status = Dispatched`);
                 console.log('Email is Sent');
             }
             catch (error) {

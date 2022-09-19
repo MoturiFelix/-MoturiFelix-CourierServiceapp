@@ -7,14 +7,14 @@ const app= express()
  SendEmails()
 
 
-const run =()=>
-{
+// const run =()=>
+// {
 // cron.schedule('* * * * * *', async() => {
 //   console.log('running a 5 seconds');
 //   await SendEmails()
 // })
-}
-run()
+// }
+// run()
 
 
 

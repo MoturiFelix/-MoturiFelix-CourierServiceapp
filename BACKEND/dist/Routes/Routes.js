@@ -16,5 +16,5 @@ router.get('/', ProductController_1.getAllParcels);
 router.get('/:id', ProductController_1.getSingleParcel);
 router.post('/', ProductController_2.insertParcel);
 // router.put('/:id')
-router.delete('/:id');
+router.delete('/:id', ProductController_1.deleteParcel);
 exports.default = router;

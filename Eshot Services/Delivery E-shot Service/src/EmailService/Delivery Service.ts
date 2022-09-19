@@ -56,7 +56,7 @@ console.log(task);
         try {
             
             await sendMail(messageoption)
-            await pool.request().query(`UPDATE Parcels SET P_Status='Being Delivered' WHERE P_Status = Dispatched`)
+            await pool.request().query(`UPDATE Parcels SET P_Status= Being Delivered WHERE P_Status = Dispatched`)
             console.log('Email is Sent');
             
         } catch (error) {

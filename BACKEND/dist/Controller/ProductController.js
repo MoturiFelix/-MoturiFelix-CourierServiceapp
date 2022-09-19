@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAllParcels = exports.getSingleParcel = exports.insertParcel = void 0;
+exports.deleteParcel = exports.getAllParcels = exports.getSingleParcel = exports.insertParcel = void 0;
 const uuid_1 = require("uuid");
 const DB_1 = __importDefault(require("../DatabaseHelper/DB"));
 const db = new DB_1.default();
@@ -60,6 +60,38 @@ const getSingleParcel = (req, res) => __awaiter(void 0, void 0, void 0, function
     }
 });
 exports.getSingleParcel = getSingleParcel;
+const getAllParcels = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const parcels = (yield db.exec("get_all_parcels")).recordset;
+        if (parcels.length === 0) {
+            return res.json({ message: "no Parcels in the database" });
+        }
+        else {
+            return res.json(parcels);
+        }
+    }
+    catch (error) {
+        res.json({ error });
+    }
+});
+exports.getAllParcels = getAllParcels;
+const deleteParcel = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const ParcelID = req.params.id;
+        const { recordset } = yield db.exec("get_single_parcel", { ParcelID });
+        if (!recordset[0]) {
+            res.status(404).json({ message: "Parcel Not Found" });
+        }
+        else {
+            yield db.exec("softDeleteParcel", { ParcelID });
+            res.status(200).json({ message: "Parcel Deleted" });
+        }
+    }
+    catch (error) {
+        res.status(400).json({ message: "Parcel Not Deleted!" });
+    }
+});
+exports.deleteParcel = deleteParcel;
 //   export const delete_parcel:RequestHandler<{id:string}> = async (req , res ) =>{
 //     try {
 //         const ParcelID = req.params.id;
@@ -76,18 +108,3 @@ exports.getSingleParcel = getSingleParcel;
 //         res.json({error})
 //     }
 // }
-const getAllParcels = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const parcels = (yield db.exec("get_all_parcels")).recordset;
-        if (parcels.length === 0) {
-            return res.json({ message: "no Parcels in the database" });
-        }
-        else {
-            return res.json(parcels);
-        }
-    }
-    catch (error) {
-        res.json({ error });
-    }
-});
-exports.getAllParcels = getAllParcels;

@@ -1,4 +1,4 @@
-import { getSingleParcel, getAllParcels } from './../Controller/ProductController';
+import { getSingleParcel, getAllParcels, deleteParcel } from './../Controller/ProductController';
 import { VerifyToken } from './../Middleware/VerifyToken';
 import { registerUser, loginUser, getHomepage ,checkUser } from './../Controller/UserController';
 import { Router } from "express";
@@ -20,6 +20,6 @@ router.get('/',getAllParcels)
 router.get('/:id',getSingleParcel)
 router.post ('/', insertParcel)
 // router.put('/:id')
-router.delete('/:id')
+router.delete('/:id', deleteParcel)
 
 export default router 

@@ -39,7 +39,7 @@ const SendEmails = () => __awaiter(void 0, void 0, void 0, function* () {
             };
             try {
                 yield (0, Email_1.default)(messageoption);
-                // await pool.request().query(`UPDATE Users SET Issent='1' WHERE Issent = '0'`)
+                yield pool.request().query(`UPDATE Users SET Issent='1' WHERE Issent = '0'`);
                 console.log('Email is Sent');
             }
             catch (error) {

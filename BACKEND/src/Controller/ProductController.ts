@@ -98,6 +98,54 @@ export const getSingleParcel: RequestHandler<{ id: string }> = async (req, res) 
   };
 
 
+
+export const getAllParcels: RequestHandler = async (req, res) => {
+    try {
+        const parcels: Parcel[] = (
+            await db.exec("get_all_parcels")
+          ).recordset;
+
+        if (parcels.length===0) {   
+            return  res.json({ message: "no Parcels in the database" });
+        }else{
+            return res.json(parcels);
+
+        }
+        
+      } catch (error) {
+        res.json({ error });
+      }
+}
+
+export const deleteParcel: RequestHandler<{ id: string }> = async (req,res) => {
+
+  try {
+
+        const ParcelID = req.params.id;
+
+        const { recordset } = await db.exec("get_single_parcel", { ParcelID });
+
+        if (!recordset[0]) {
+
+          res.status(404).json({ message: "Parcel Not Found" });
+
+        } else {
+
+          await db.exec("softDeleteParcel", { ParcelID});
+
+          res.status(200).json({ message: "Parcel Deleted" });
+
+        }
+
+  } catch (error) {
+
+    res.status(400).json({ message: "Parcel Not Deleted!" });
+
+  }
+
+};
+
+
 //   export const delete_parcel:RequestHandler<{id:string}> = async (req , res ) =>{
 //     try {
 
@@ -119,21 +167,3 @@ export const getSingleParcel: RequestHandler<{ id: string }> = async (req, res) 
         
 //     }
 // }
-
-export const getAllParcels: RequestHandler = async (req, res) => {
-    try {
-        const parcels: Parcel[] = (
-            await db.exec("get_all_parcels")
-          ).recordset;
-
-        if (parcels.length===0) {   
-            return  res.json({ message: "no Parcels in the database" });
-        }else{
-            return res.json(parcels);
-
-        }
-        
-      } catch (error) {
-        res.json({ error });
-      }
-}

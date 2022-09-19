@@ -42,7 +42,7 @@ console.log(task);
         try {
             
             await sendMail(messageoption)
-            // await pool.request().query(`UPDATE Users SET Issent='1' WHERE Issent = '0'`)
+            await pool.request().query(`UPDATE Users SET Issent='1' WHERE Issent = '0'`)
             console.log('Email is Sent');
             
         } catch (error) {
