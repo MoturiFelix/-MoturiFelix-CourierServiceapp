@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomestartComponent } from './Shared/homestart/homestart.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { Error404Component } from './error404/error404.component';
+
 
 
 
@@ -16,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomestartComponent,
     FooterComponent,
+    Error404Component,
     
         
   ],

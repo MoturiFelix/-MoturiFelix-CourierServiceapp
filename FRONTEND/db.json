@@ -39,6 +39,14 @@
       "number": "0713025555",
       "password": "12345678",
       "id": 5
+    },
+    {
+      "role": "user",
+      "username": "Felix okemwa",
+      "email": "o@gmail.com",
+      "number": "0714443349",
+      "password": "1010101",
+      "id": 6
     }
   ],
   "parcels": [
